@@ -1,4 +1,4 @@
-/* Sweet2Elite shared Whop checkout (v1)
+/* Sweet2Elite shared Whop checkout (v2)
    Load once per funnel (Head Tracking Code), then on each checkout page use:
    <div data-s2e-checkout
         data-plan="plan_XXXX"
@@ -103,7 +103,7 @@
     });
   }
 
-  function start() { loadElements(mountAll); }
+  function start() { if (!document.querySelector("[data-s2e-checkout]")) return; loadElements(mountAll); }
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", start);
   } else {
