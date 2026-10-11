@@ -103,8 +103,8 @@
     });
   }
 
-  function start() { if (!document.querySelector("[data-s2e-checkout]")) return; loadElements(mountAll); }
-  if (document.readyState === "loading") {
+   function start() { if (!document.querySelector("[data-s2e-checkout]")) return; loadElements(mountAll); }
+   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", start);
   } else {
     start();
